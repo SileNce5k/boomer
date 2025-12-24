@@ -487,6 +487,7 @@ proc main() =
       of KeyPress:
         var key = XLookupKeysym(cast[PXKeyEvent](xev.addr), 0)
         case key
+        of XK_period: scrollUp()
         of XK_EQUAL: scrollUp()
         of XK_MINUS: scrollDown()
         of XK_0:
